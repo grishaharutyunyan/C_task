@@ -1,0 +1,46 @@
+Project Overview:
+1. Stack Implementation:
+
+The project defines a stack structure (myStack) using a dynamic array to store elements.
+The stack follows the Last In, First Out (LIFO) principle.
+2. Stack Operations:
+
+Initialization: 
+The stack is initialized with an initial capacity.
+Push Operation: Adds an element to the top of the stack. 
+The stack dynamically resizes if the capacity is exceeded.
+Pop Operation: 
+Removes and returns the element from the top of the stack. 
+Handles underflow conditions.
+
+Peek Operation: Returns the top element without removing it.
+
+Size Function:Returns the current number of elements in the stack.
+
+Capacity Function: Returns the current capacity of the stack.
+
+Print Stack Function: Displays the elements of the stack.
+
+3. User Interface (Menu-Driven): I decided to add a menu to make it easier to use
+
+A user menu allows users to perform various operations on the stack.
+Menu options include push, pop, peek, print stack, check size, check capacity, and exit.
+4. Input Validation:
+
+The program validates user input to ensure it is a valid integer where necessary.
+Error messages are displayed for invalid input, guiding the user to enter correct values.
+
+5. Memory Management:
+
+Memory is dynamically allocated for the stack structure and array.
+Proper memory deallocation is performed when the program exits.
+
+How to Use:
+Users can interact with the stack by choosing options from the menu.
+The program provides feedback on the performed operations, such as pushing/popping elements and displaying the stack status.
+
+Potential Improvements (Optional):
+Additional features, such as error handling during stack resizing or advanced memory management, could be implemented.
+Unit tests could be developed to ensure the correctness of stack operations.
+Conclusion:
+This project serves as a foundation for a simple stack implementation in C, providing users with a practical understanding of stack operations and dynamic memory allocation. It includes a user interface for easy interaction with the stack functionalities.

@@ -1,0 +1,147 @@
+Picsart Academy 
+Grisha Harutyunyan
+
+---
+
+
+
+## Dynamic Array Library in C
+
+### Overview:
+
+The `din.c` file contains a versatile C implementation of a dynamic array data structure designed for automatic resizing, making it suitable for managing variable-sized collections of elements. This library provides functions to initialize, resize, insert, remove, and access elements within the dynamic array.
+
+### Structure:
+
+The dynamic array structure, defined in `dynamic_array.h`, consists of three main components:
+
+```c
+typedef struct {
+    int* array;
+    size_t size;
+    size_t capacity;
+} DynamicArray;
+```
+
+- `array`: A pointer to the dynamically allocated array of elements.
+- `size`: The current number of elements in the array.
+- `capacity`: The current capacity of the array.
+
+### Library Functions:
+
+1. **Initialization:**
+
+   ```
+   void initializeArray(DynamicArray* arr, size_t initialCapacity);
+   ```
+
+   Initializes the dynamic array with a specified initial capacity.
+
+2. **Resizing:**
+
+   ```
+   void resizeArray(DynamicArray* arr);
+   ```
+
+   Doubles the size of the array when it reaches capacity.
+
+3. **Insertion:**
+
+   ```
+   void insertElement(DynamicArray* arr, int value);
+   ```
+
+   Inserts an element at the end of the array, resizing it if necessary.
+
+   ```
+   void insertAtIndex(DynamicArray* arr, size_t index, int value);
+   ```
+
+   Inserts an element at a specified index, shifting subsequent elements.
+
+4. **Deletion:**
+
+   ```
+   void removeByIndex(DynamicArray* arr, size_t index);
+   ```
+
+   Removes an element at the specified index and shrinks the array if significantly less space is used.
+
+   ```
+   void removeByValue(DynamicArray* arr, int value);
+   ```
+
+   Removes an element by its value.
+
+5. **Access:**
+
+   ```
+   int getElement(DynamicArray* arr, size_t index);
+   ```
+
+   Retrieves the element at the specified index.
+
+6. **Information Retrieval:**
+
+   ```
+   size_t getSize(DynamicArray* arr);
+   ```
+
+   Retrieves the current size of the array.
+
+   ```
+   size_t getCapacity(DynamicArray* arr);
+   ```
+
+   Retrieves the current capacity of the array.
+
+7. **Memory Management:**
+
+   ```
+   void freeArray(DynamicArray* arr);
+   ```
+
+   Frees the memory allocated for the dynamic array.
+
+8. **Advanced Features (Optional):**
+
+   - Sorting: `void sortArray(DynamicArray* arr);`
+   - Searching: `int binarySearch(DynamicArray* arr, int target);`
+
+### Integration:
+
+1. **Include Header File:**
+   - Include the dynamic array header file (`dynamic_array.h`) in your `din.c` file.
+
+2. **Link Source Code:**
+   - Compile the dynamic array source code (`dynamic_array.c`) along with your `din.c` source code.
+
+### Example Usage:
+
+
+#include <stdio.h>
+#include "dynamic_array.h"
+
+int main() {
+    DynamicArray myArray;
+    initializeArray(&myArray, 5);
+
+    insertElement(&myArray, 10);
+    insertElement(&myArray, 20);
+    insertElement(&myArray, 30);
+
+    printf("Array size: %zu\n", getSize(&myArray));
+    printf("Array capacity: %zu\n", getCapacity(&myArray));
+
+    removeByValue(&myArray, 20);
+
+    printf("Array size after removal: %zu\n", getSize(&myArray));
+    printf("Array capacity after removal: %zu\n", getCapacity(&myArray));
+
+    freeArray(&myArray);
+
+    return 0;
+}
+
+
+This documentation outlines the structure, usage, and integration steps for the Dynamic Array Library within the context of the `din.c` file.

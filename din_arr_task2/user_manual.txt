@@ -1,0 +1,39 @@
+Menu Options
+
+           The program provides a menu with the following options:
+
+			Initialize Array:
+Initialize the dynamic array with a specified initial capacity.
+
+Enter the initial capacity when prompted.
+			Push Element:
+
+Add an element to the end of the array.
+Enter the element value when prompted.
+
+			Delete Element by Index:
+Remove an element from the array by specifying its index.
+Enter the index when prompted.
+
+			Delete Element by Value:
+Remove an element from the array by specifying its value.
+Enter the value when prompted.
+
+			Access Element by Index:
+Retrieve the value of an element by specifying its index.
+Enter the index when prompted.
+
+			Get Current Size:
+Display the current number of elements in the array.
+
+			Get Capacity:
+Display the current capacity of the array.
+
+			Sort Array:
+Sort the elements of the array in ascending order using the bubble sort algorithm.
+
+			Display Array:
+Display the elements of the array.
+
+			Exit:
+Exit the program.
